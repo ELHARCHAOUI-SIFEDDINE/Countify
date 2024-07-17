@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  all: unset;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  width: 400px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.25);
+}
+
+.card--limit {
+  background-color: #f39c12;
+}
+
+.title {
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  color: #2c3e50;
+}
+
+.count {
+  color: #e74c3c;
+  font-size: 6rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  transition: color 0.3s ease;
+}
+
+.reset-btn {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.reset-btn:hover,
+.reset-btn:focus {
+  opacity: 1;
+}
+
+.reset-btn-icon {
+  color: #e74c3c;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.button-container {
+  background-color: #3498db;
+  height: 4rem;
+  width: 100%;
+  margin-top: 2rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+
+.count-btn:hover,
+.count-btn:focus {
+  background-color: #2980b9;
+}
+
+.count-btn--plus {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.count-btn--minus {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.count-btn-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+@media (max-width: 680px) {
+  .card {
+    width: 90%;
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .title {
+    margin-top: 60px;
+    font-size: 1.6rem;
+  }
+
+  .buttons {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
